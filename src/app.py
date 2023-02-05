@@ -15,7 +15,7 @@ def index():
         thursday_text = inputs.get('thursdayText', '')
 
         # Load the template
-        doc = docxtpl.DocxTemplate("ukeslogg.docx")
+        doc = docxtpl.DocxTemplate("mal-ukeslogg.docx")
 
         # Insert the input text into the template
         context = {

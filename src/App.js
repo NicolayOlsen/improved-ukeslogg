@@ -37,50 +37,52 @@ function App() {
       
       return (
       <div className='calender'>
-        <div className='friday'>
+        <div className='week'>
           <h1>Uke</h1>
           <form onSubmit={handleSubmit}>
             <input type="text" value={weekNumber} onChange={e => setWeekNumber(e.target.value)} />
             <br/>
           </form>
         </div>
-        <div className='friday'>
+        <div className='containers'>
           <h1>Fredag</h1>
           <form onSubmit={handleSubmit}>
             <textarea type="text" value={fridayText} onChange={e => setFridayText(e.target.value)} />
             <br/>
           </form>
         </div>
-        <div className='friday'>
+        <div className='containers'>
           <h1>Mandag</h1>
           <form onSubmit={handleSubmit}>
             <textarea type="text" value={mondayText} onChange={e => setMondayText(e.target.value)} />
             <br/>
           </form>
         </div>
-        <div className='friday'>
+        <div className='containers'>
           <h1>Tirsdag</h1>
           <form onSubmit={handleSubmit}>
             <textarea type="text" value={tuesdayText} onChange={e => setTuesdayText(e.target.value)} />
             <br/>
           </form>
         </div>
-        <div className='friday'>
+        <div className='containers'>
           <h1>Onsdag</h1>
           <form onSubmit={handleSubmit}>
             <textarea type="text" value={wednesdayText} onChange={e => setWednesdayText(e.target.value)} />
             <br/>
           </form>
         </div>
-        <div className='friday'>
+        <div className='containers'>
           <h1>Torsdag</h1>
           <form onSubmit={handleSubmit}>
             <textarea type="text" value={thursdayText} onChange={e => setThursdayText(e.target.value)} />
             <br/>
-            <button type="submit">GENERER UKESLOGG</button>
           </form>
         </div>
-        {data && <p>Generert fil: {data.fileName}</p>}
+        <div className='footer'>
+          <button type="submit" onClick={handleSubmit}>Generer ukeslogg</button>
+          {data && <p>Generert fil: {data.fileName}</p>} 
+        </div>
     </div>
 );
 }
